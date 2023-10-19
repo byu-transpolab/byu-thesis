@@ -1,0 +1,18 @@
+project: 
+  type: book
+
+book:
+  title: "An example thesis"
+  author: "Cosmo Cougar"
+  chapters:
+    - index.qmd
+    - 02_more.qmd
+  appendices: 
+    - 11_requirements.qmd
+    - 12_etd.qmd
+
+
+format:
+  html:
+    theme:
+      - cosmo
