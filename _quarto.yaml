@@ -16,3 +16,5 @@ format:
   html:
     theme:
       - cosmo
+  byu-thesis-pdf:
+    keep-tex: true
