@@ -7,10 +7,13 @@ book:
   chapters:
     - index.qmd
     - 02_more.qmd
+  references: 10_references.qmd
   appendices: 
     - 11_requirements.qmd
     - 12_etd.qmd
 
+csl: apa.csl
+bibliography: references.bib
 
 format:
   html:

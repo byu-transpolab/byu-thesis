@@ -8,3 +8,4 @@ template document will highlight how the `byuthesis` class and
 in the College of Engineering at BYU. A concise statement of the College of
 Engineering formatting requirements can be found in @sec-reqs.
 
+You should cite things like @StudentRP20.

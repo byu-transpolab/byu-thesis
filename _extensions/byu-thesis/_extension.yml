@@ -6,4 +6,6 @@ contributes:
   formats:
     pdf:
       template: byuthesis.tex
+      execute:
+        echo: false
 
