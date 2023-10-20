@@ -34,6 +34,7 @@ layout: fancy, oneside, masters
 # If your degree is not a PhD or MS, then you can overwrite the degree using 
 # the \degree command: \degree{Bachelors of Science}
 # degree: Bachelors of Science with University Honors
+department: Civil and Construction Engineering
 # list your chair and any other members of your committee
 chair: Norman D. Smith
 committee:
