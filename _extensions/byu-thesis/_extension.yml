@@ -10,4 +10,5 @@ contributes:
         echo: false
       format-resources:
         - byuthesis.cls
+        - college_logo.png
 

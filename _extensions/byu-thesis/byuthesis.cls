@@ -434,7 +434,7 @@
 		\@degree} \\
 		\vspace{\fill}
 		\begin{figure}[htbp]
-			\includegraphics[width=3.5in]{figures/college_logo}
+			\includegraphics[width=3.5in]{college_logo}
 		\end{figure}
 	\end{Spacing}
 }
