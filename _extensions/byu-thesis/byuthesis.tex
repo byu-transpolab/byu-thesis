@@ -10,7 +10,7 @@ $pandoc.tex()$
 \customtitle{Exceptional Engineering Research \\ That Has Taken Longer Than \\ Everyone Thought It Would}
 
 % This is the date of graduation
-\date{April 2021}
+\date{$date$}
 
 % If your degree is not a PhD or MS, then you can overwrite the degree using 
 % the \degree command: \degree{Bachelors of Basics}
@@ -24,17 +24,38 @@ $for(committee)$
   \committeemember{$committee$}
 $endfor$
 
-% Include any keywords you would like for your thesis/dissertation
-\keywords{awesome stuff, killer app, buzz words}
+$if(keywords)$
+\keywords{
+    $for(keywords/allbutlast)$$keywords$; $endfor$ 
+    $for(keywords/last)$$keywords$$endfor$
+}
+$endif$
+
 \begin{document}
 
 \frontmatter
 \titlepage
-\clearpage
+\cleardoublepage
 
 \customtitlepage
-\clearpage
+\cleardoublepage
 
+
+$if(abstract)$
+  \begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+\cleardoublepage
+
+	\tableofcontents*
+	\cleardoublepage
+
+	\listoffigures
+	\cleardoublepage
+
+	\listoftables
+	\cleardoublepage
 
 \mainmatter
 $body$
