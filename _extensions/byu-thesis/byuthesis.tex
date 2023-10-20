@@ -7,7 +7,7 @@ $pandoc.tex()$
 \author{$author$}
 
 % On the custom title page, use the same title, but format as you like
-\customtitle{Exceptional Engineering Research \\ That Has Taken Longer Than \\ Everyone Thought It Would}
+\customtitle{$if(customtitle)$$customtitle$$else$$title$$endif$}
 
 % This is the date of graduation
 \date{$date$}
