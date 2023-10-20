@@ -8,4 +8,6 @@ contributes:
       template: byuthesis.tex
       execute:
         echo: false
+      format-resources:
+        - byuthesis.cls
 
