@@ -30,6 +30,8 @@ committee:
 keywords: 
   - awesome stuff
   - engineering
+acknowledgments: | 
+  Students should acknowledge funding sources. They may also use the acknowledgment page to express appreciation for the committee members, friends or family who provided support or aided the research, writing or technical aspects of the thesis/dissertation. Acknowledgments should be simple and in good taste.
 
 csl: apa.csl
 bibliography: references.bib
