@@ -1,3 +1,39 @@
 # More formatting {#sec-more}
 
+```{r setup}
+#| include: false
+
+library(tidyverse)
+library(kableExtra)
+theme_set(theme_bw())
+```
+
+
 Even more text!
+
+You can generate a figure with R, and refer to it in the text, such as I do with
+@fig-example. By default, the code is shown in the HTML but not in the PDF. 
+Note that figure captions are like sentences.
+
+```{r fig-example}
+#| label: fig-example
+#| fig-cap: An example plot.
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point() 
+```
+
+You can also create tables. I like using `kableExtra` and `modelsummary`. 
+you can also refer to tables, like in @tbl-example. Note that table captions
+are like titles, so should be in Title Case.
+
+```{r tbl-example}
+#| label: tbl-example
+#| tbl-cap: Example Table.
+mpg |> 
+  group_by(manufacturer) |> 
+  summarise(cty = mean(cty), hwy = mean(hwy)) |> 
+  kbl(digits = 3, booktabs = TRUE) |> 
+  kable_styling()
+  
+```
+
