@@ -1,4 +1,4 @@
-\documentclass[fancy, phd]{byuthesis}
+\documentclass[$if(layout)$$layout$fancy, ms$endif$]{byuthesis}
 \usepackage{bookmark}
 
 $pandoc.tex()$
@@ -14,6 +14,9 @@ $pandoc.tex()$
 
 % If your degree is not a PhD or MS, then you can overwrite the degree using 
 % the \degree command: \degree{Bachelors of Basics}
+$if(degree)$
+\degree{$degree$}
+$endif$
 
 % Your department
 \department{Department of Electrical and Computer Engineering}
