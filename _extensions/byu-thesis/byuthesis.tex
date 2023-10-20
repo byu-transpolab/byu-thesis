@@ -19,11 +19,10 @@ $pandoc.tex()$
 \department{Department of Electrical and Computer Engineering}
 
 % The names of your committee members
-\committeechair{Norman D. Smith}
-\committeemember{Mary Q. Scott}
-\committeemember{Steven R. Jones}
-\committeemember{Anna B. Hanna}
-
+\committeechair{$chair$}
+$for(committee)$
+  \committeemember{$committee$}
+$endfor$
 
 % Include any keywords you would like for your thesis/dissertation
 \keywords{awesome stuff, killer app, buzz words}

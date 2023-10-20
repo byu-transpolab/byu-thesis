@@ -11,6 +11,14 @@ book:
   appendices: 
     - 11_requirements.qmd
     - 12_etd.qmd
+chair: Norman D. Smith
+committee:
+  - Mary Q. Scott
+  - Steven R. Jones
+  - Anna B. Hanna
+keywords: 
+  - awesome stuff
+  - engineering
 
 csl: apa.csl
 bibliography: references.bib
