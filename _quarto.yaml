@@ -8,6 +8,8 @@ book:
   chapters:
     - index.qmd
     - 02_more.qmd
+    - 03_articles.qmd
+    - 04_conclusions.qmd
   references: 10_references.qmd
   appendices: 
     - 11_requirements.qmd
@@ -23,7 +25,7 @@ book:
 # Layout options are simple/fancy, oneside/twoside, and masters/phd.
 # Leave options blank for defaults.
 # Defaults are simple for document style, and masters for degree type.
-layout: simple, twoside, masters
+layout: fancy, oneside, masters
 # If your degree is not a PhD or MS, then you can overwrite the degree using 
 # the \degree command: \degree{Bachelors of Science}
 # degree: Bachelors of Science with University Honors
@@ -48,3 +50,4 @@ format:
       - cosmo
   byu-thesis-pdf:
     keep-tex: true
+    highlight-style: arrow

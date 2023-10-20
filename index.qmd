@@ -3,9 +3,155 @@
 The opening chapter of a thesis or dissertation will typically provide an
 introduction to the body of research. At the beginning of a chapter, it is
 common to provide some introductory text. Instead of discussing research, this
-template document will highlight how the `byuthesis` class and
-\LaTeX{} can be used to prepare a thesis or dissertation document for submission
+template document will highlight how Quarto uses the `byuthesis` class for
+\LaTeX{} to prepare a thesis or dissertation document for submission
 in the College of Engineering at BYU. A concise statement of the College of
 Engineering formatting requirements can be found in @sec-reqs.
 
-You should cite things in sentence as @StudentRP20. You could also cite things in parentheses as [@journal1].
+This template focuses on the Quarto implementation rather than all 
+details of LaTeX and the `byuthesis.cls` class. This document
+is also not trying to teach everything possible with Quarto, and students
+are directed to the [Quarto documentation](https://quarto.org/docs/guide/) for
+additional help.
+
+## Class Options {#sec-class-options}
+
+The byuthesis class has two class options. The first option allows the
+author to choose between a *simple* or *fancy* document format. The
+simple format is traditional in style and straightforward to implement
+using a standard word processor or LaTeX. The fancy format leverages the
+advanced typesetting features of LaTeX and the memoir class and more
+effectively utilizes the full letter-size page while following
+typesetting best practices. With the second class option, the author can
+specify whether the document fulfills the requirements for a masters or
+doctoral degree (or even for an undergraduate honors thesis).
+These settings are controlled from the `_quarto.yml` properties file.
+This template uses the fancy formatting.
+
+
+The formatting and LaTeX features that you will use to prepare your
+thesis are outlined briefly in the next several chapters. The narrow,
+single-column format of this document is based on long-standing
+principles of typography [@Bringhurst19]. This formatting is easy to
+read compared to the wide-column, double-spaced format used previously
+for theses and dissertations. The format of the document is defined in
+`byuthesis.cls`, a LaTeX class defined specifically for theses and
+dissertations in the College of Engineering at BYU. 
+
+## Citations and References {#sec-citations}
+
+Citations are a critical tool for academic writing. 
+The citation style is defined with a
+`csl` file that you include in your document folder and reference in the 
+`_quarto.yml` file. The code below instructs the document to use the APA 
+citation style using references stored in the `references.bib` bibtex file.
+More reference styles are available from [Zotero](https://www.zotero.org/styles).
+
+```yaml
+csl: apa.csl
+bibliography: references.bib
+```
+
+With APA and other author-year styles, you can use in-text or parenthetical
+citations. Here is an example of a parenthetical citation of a master's thesis
+[@masters1]. You can also cite articles and documents with in-line citations,
+such as the important work by @Bringhurst19.
+A complete list of the references cited in this document
+can be found in a References section at the end of the document before the
+Appendices.
+
+When using the fancy option of `byuthesis.cls`, footnotes appear as
+side notes in the right margin. You can make a reference to a section by
+using its label, such
+as @sec-class-options. You can reference a chapter in this way,
+for example.^[Inline footnotes are often easy to write, and can also use other references. For details on formatting, see Appendix @sec-reqs.]
+
+### Figures
+
+The syntax above provides an example for declaring a subsection. This
+subsection will include some text and give an examples of figures and
+tables. Let's start with figures. Figures are typically diagrams,
+graphs, pictures, maps, or charts. Figures should be centered with
+respect to the text column. Figure captions should be centered below the
+figure. If multiple lines are needed for the caption, it should be
+left/right justified at the margins. @fig-half shows the gradient of a function and
+the half space where the function is decreasing. Notice how the 
+`@ref` command always inserts both the Figure label and the correct number.
+
+![This is a regular figure with a centered bottom caption.](figures/gradf_half_space.pdf){#fig-half width="3.0in"}
+
+Basic quarto / markdown figures will create a figure located centrally in
+the text column. With the `byuthesis.cls`
+document class, we can have small figures that are set in the
+sidemargin.^[Sidemargin figures are a feature that are great in this thesis, but
+be careful that they will not render in the HTML version or in most journal 
+templates.]
+An example of a margin figure is shown in Figure~\ref{fig:brach}.
+
+\begin{marginfigure}
+	\includegraphics[width=1.8in]{figures/brachistochrone.pdf}
+	\caption{This is an example of a margin figure.}
+	\label{fig:brach}
+\end{marginfigure}
+
+We can also create figures that place the caption in the side margin. This is a
+matter of personal preference. You can choose between centered captions and
+side-margin captions, but you should be consistent throughout your document.
+
+\begin{figure}[htbp]
+	\begin{sidecaption}{This is a figure with a side caption that is not short, but not that long either.}[fig:sidecap]
+		\centering
+		\includegraphics[width=3.0in]{figures/gradf_half_space.pdf}
+	\end{sidecaption}
+\end{figure}
+
+Finally, we can create a figure that spans the width of the text column and the side margin. This option should not be used frequently as it requires some tweaking of the vertical distance of the caption and follow-on text below the figure. It will work robustly when the figure appears at the top or middle of a page, but may push the caption onto the next page when it appears at the bottom. There may be some instances with wide images where the additional manual adjusting is worth the effort.
+
+\begin{figure}[h]
+	\setlength{\sidecapraise}{-1.3cm}   % manual adjustment of figure caption position
+	\begin{sidecaption}{The caption for a full-width figure appears in the margin below it.}[fig:fullwidth] %Such figures utilize the side margin.}
+		\includegraphics[width=1.35\textwidth]{figures/altitude-pitch-all.pdf}
+	\end{sidecaption}
+	\vskip -1.0cm     
+\end{figure}
+
+Figures should be placed after the paragraph in which they are first
+referenced. If a figure will not fit on the same page, continue the text
+and place the figure at the top of the next page.
+
+
+
+
+
+#### Subsubsection Example
+
+The syntax above provides an example of how to include a subsubsection.
+In this thesis template, the document has four primary division levels:
+`\chapter`, `\section`, `\subsection`, and `\subsubsection`. The command
+`\subsubsection` is used to define the lowest level of division. Notice
+that subsubsection titles are not numbered.
+
+### Tables
+Tables typically contain numerical or statistical information. Tables
+are also fairly straightforward to include in a LaTeX document.
+Tables are most commonly centered in the text column with the table caption centered
+above the table. A basic table is given in @tbl-letters.
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+| A    | B    | C    |
+| E    | F    | G    |
+| A    | G    | G    |
+
+: My Caption {#tbl-letters}
+
+
+LaTeX refers to figures and tables as floats and often tries to locate
+figures at the top or bottom of a page. The user has some control over
+this, but LaTeX can behave like it has a mind of its own sometimes. In
+reality it is placing figures according to internal algorithms and
+parameters that you can adjust. If you are interested in digging into
+this level of detail, an internet search on "LaTeX float parameters"
+will provide ample reading. Note that Quarto can understand raw LaTeX, but will
+only render it to the PDF, and not to any HTML or other output forms you
+might like to use.

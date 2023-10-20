@@ -2,7 +2,7 @@
 
 Theses and dissertations in the College of Engineering should follow the requirements outlined below.
 
-  - **BYU Graduate Studies requirements:**  The document must include a title page, abstract, and table of contents. The title page must follow the format prescribed at <https://gradstudies.byu.edu/academics/thesis-and-dissertation>.  
+  - **BYU Graduate Studies requirements:**  The document must include a title page, abstract, and table of contents. The title page must follow the format prescribed at the [Grad Studies website](https://gradstudies.byu.edu/academics/thesis-and-dissertation).  
 
   - **PDF requirements:** All fonts should be embedded in the PDF. The PDF file should include bookmarks for each chapter and heading that is present in the table of contents section.
 

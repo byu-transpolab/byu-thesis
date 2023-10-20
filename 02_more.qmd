@@ -1,4 +1,4 @@
-# More formatting {#sec-more}
+# Using Quarto {#sec-more}
 
 ```{r setup}
 #| include: false
