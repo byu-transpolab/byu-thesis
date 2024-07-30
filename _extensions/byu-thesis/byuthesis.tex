@@ -1,6 +1,7 @@
 \documentclass[$if(layout)$$layout$fancy, ms$endif$]{byuthesis}
 \usepackage{bookmark}
 
+
 $pandoc.tex()$
 
 \title{$title$}
@@ -35,6 +36,14 @@ $if(keywords)$
     $for(keywords/last)$$keywords$$endfor$
 }
 $endif$
+
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of Contents}
+\else
+  \newcommand\contentsname{Table of Contents}
+\fi
+}
 
 \begin{document}
 
