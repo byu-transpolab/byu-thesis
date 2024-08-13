@@ -8,12 +8,15 @@ library(kableExtra)
 theme_set(theme_bw())
 ```
 
+Of course, the real reason to use Quarto is so you can embed R, python, Julia,
+or other programmatic elements into your thesis.
+Each `.qmd` file in your thesis is rendered as a separate R or Python section.
+So any libraries you load, datasets you create, etc. in chunks will be available
+for the rest of the chunks in this document, but not in subsequent documents.
 
-Even more text!
-
+## Figures in R
 You can generate a figure with R, and refer to it in the text, such as I do with
 @fig-example. By default, the code is shown in the HTML but not in the PDF. 
-Note that figure captions are like sentences.
 
 ```{r fig-example}
 #| label: fig-example
@@ -22,6 +25,11 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point() 
 ```
 
+
+By default, the R figure will be centered in the text at 
+
+
+## Tables in R
 You can also create tables. I like using `kableExtra` and `modelsummary`. 
 you can also refer to tables, like in @tbl-example. Note that table captions
 are like titles, so should be in Title Case.
@@ -34,6 +42,8 @@ mpg |>
   summarise(cty = mean(cty), hwy = mean(hwy)) |> 
   kbl(digits = 3, booktabs = TRUE) |> 
   kable_styling()
-  
 ```
+
+
+
 
