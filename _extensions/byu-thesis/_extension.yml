@@ -12,6 +12,7 @@ contributes:
         - byuthesis.cls
         - college_logo.png
       header-includes:
+        - \usepackage[all]{nowidow}
         - \usepackage{siunitx}
         - \usepackage{booktabs}
         - \usepackage{longtable}
@@ -28,4 +29,5 @@ contributes:
         - \usepackage[utf8]{inputenc}
         - \usepackage{makecell}
         - \usepackage{xcolor}
+      pdf-engine: xelatex
 
