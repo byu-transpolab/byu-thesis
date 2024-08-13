@@ -4,8 +4,13 @@ Theses and dissertations in the College of Engineering should follow the require
 
   - **BYU Graduate Studies requirements:**  The document must include a title page, abstract, and table of contents. The title page must follow the format prescribed at the [Grad Studies website](https://gradstudies.byu.edu/academics/thesis-and-dissertation).  
 
-  - **PDF requirements:** All fonts should be embedded in the PDF. The PDF file should include bookmarks for each chapter and heading that is present in the table of contents section.
-
+  - **PDF requirements:** All fonts should be embedded in the PDF. The PDF file should include bookmarks for each chapter and heading that is present in the table of contents section. To embed the fonts, the following ghost script command seems to work
+```
+gs -dPDFSETTINGS=/prepress -dCompatibilityLevel=1.4\
+  -dEmbedAllFonts=true -dSubsetFonts=false -dNOPAUSE\
+  -dBATCH -sDEVICE=pdfwrite\
+  -sOutputFile=output.pdf input.pdf
+```
   - **Page size, margins, and line spacing:** US letter-sized pages with margins of at least 1~inch on all sides of the text column should be used. Line spacing should be single spaced and facilitate readability with no more than six lines per inch. If using notes and figures in the side margin as is done with the `fancy` class option of `byuthesis.cls`, the space between the text column and the side-margin column must be at least 0.125~inches and the space between the side-margin column and the edge of the page must be at least 0.5~inches. 
 
   - **Typeface and font:** The text typeface must be a conservative serif-styled type (e.g., Palatino, Times New Roman, Garamond), in size 11 or 12 pt font. The typeface style and font size must be consistent throughout the text. A 10 pt font is allowed for figure and table captions. Font sizes for figures and tables should be selected so that the text easily legible on a printed page. A sans-serif typeface can be used for chapter and section headings if desired.
