@@ -4,8 +4,8 @@ Theses and dissertations in the College of Engineering should follow the require
 
   - **BYU Graduate Studies requirements:**  The document must include a title page, abstract, and table of contents. The title page must follow the format prescribed at the [Grad Studies website](https://gradstudies.byu.edu/academics/thesis-and-dissertation).  
 
-  - **PDF requirements:** All fonts should be embedded in the PDF. The PDF file should include bookmarks for each chapter and heading that is present in the table of contents section. To embed the fonts, the following ghost script command seems to work
-```
+  - **PDF requirements:** All fonts should be embedded in the PDF. The PDF file should include bookmarks for each chapter and heading that is present in the table of contents section. To embed the fonts, the following [ghostscript](https://www.ghostscript.com) command seems to work at embedding the fonts while preserving bookmarks and links. Note that for Windows machines, you probably need `gswin64` instead of `gs` as the leading command.
+``` sh
 gs -dPDFSETTINGS=/prepress -dCompatibilityLevel=1.4\
   -dEmbedAllFonts=true -dSubsetFonts=false -dNOPAUSE\
   -dBATCH -sDEVICE=pdfwrite\
