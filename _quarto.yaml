@@ -2,8 +2,13 @@ project:
   type: book
 
 book:
-  title: "An example thesis"
-  author: "Cosmo Cougar"
+  # You can use the pipe `|` to force linebreaks
+  title: |
+    | Exceptional Engineering Research
+    | that Has Taken Too Long
+  author:
+    - "Cosmo Cougar"
+    - "Jane Doe"
   date: "2022"
   chapters:
     - index.qmd
@@ -24,9 +29,9 @@ book:
 
 # On the custom title page, use the same title, but format as you like
 customtitle: |
-  Exceptional Engineering 
-  Research
-  that Has Taken Too Long
+  | Exceptional Engineering 
+  | Research
+  | that Has Taken Too Long
 # Layout options are simple/fancy, oneside/twoside, and masters/phd.
 # Leave options blank for defaults.
 # Defaults are simple for document style, and masters for degree type.
