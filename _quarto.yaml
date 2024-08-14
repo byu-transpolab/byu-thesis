@@ -58,5 +58,4 @@ format:
     theme:
       - cosmo
   byu-thesis-pdf:
-    keep-tex: true
     highlight-style: arrow

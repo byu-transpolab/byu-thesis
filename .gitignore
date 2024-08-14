@@ -5,3 +5,9 @@
 
 /.quarto/
 /_book/
+*_files/
+*.log
+*.nlo
+byuthesis.cls
+college_logo.png
+
