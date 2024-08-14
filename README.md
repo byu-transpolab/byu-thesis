@@ -69,8 +69,10 @@ layout: fancy, oneside, masters
 # degree: Bachelors of Science with University Honors
 ```
 
-The next set of options concerns the committee and department for your thesis.
+The next set of options concerns the committee and department for your thesis. Note that the `author` fields for the article YAML are not used for putting the student name in. This allows you to have the authorship of your paper be different from your committee.
+
 ```yaml
+student: Cosmo Cougar
 department: Civil and Construction Engineering
 # list your chair and any other members of your committee
 chair: Norman D. Smith
