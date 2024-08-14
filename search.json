@@ -1,0 +1,146 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "An example thesis",
+    "section": "",
+    "text": "1 Introduction\nThe opening chapter of a thesis or dissertation will typically provide an introduction to the body of research. At the beginning of a chapter, it is common to provide some introductory text. Instead of discussing research, this template document will highlight how Quarto uses the byuthesis class for to prepare a thesis or dissertation document for submission in the College of Engineering at BYU. A concise statement of the College of Engineering formatting requirements can be found in Appendix A.\nThis template focuses on the Quarto implementation rather than all details of LaTeX and the byuthesis.cls class. This document is also not trying to teach everything possible with Quarto, and students are directed to the Quarto documentation for additional help.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-class-options",
+    "href": "index.html#sec-class-options",
+    "title": "An example thesis",
+    "section": "1.1 Class Options",
+    "text": "1.1 Class Options\nThe byuthesis class has two class options. The first option allows the author to choose between a simple or fancy document format. The simple format is traditional in style and straightforward to implement using a standard word processor or LaTeX. The fancy format leverages the advanced typesetting features of LaTeX and the memoir class and more effectively utilizes the full letter-size page while following typesetting best practices. With the second class option, the author can specify whether the document fulfills the requirements for a masters or doctoral degree (or even for an undergraduate honors thesis). These settings are controlled from the _quarto.yml properties file. This template uses the fancy formatting.\nThe formatting and LaTeX features that you will use to prepare your thesis are outlined briefly in the next several chapters. The narrow, single-column format of this document is based on long-standing principles of typography (Bringhurst, 2019). This formatting is easy to read compared to the wide-column, double-spaced format used previously for theses and dissertations. The format of the document is defined in byuthesis.cls, a LaTeX class defined specifically for theses and dissertations in the College of Engineering at BYU.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-citations",
+    "href": "index.html#sec-citations",
+    "title": "An example thesis",
+    "section": "1.2 Citations and References",
+    "text": "1.2 Citations and References\nCitations are a critical tool for academic writing. The citation style is defined with a csl file that you include in your document folder and reference in the _quarto.yml file. The code below instructs the document to use the APA citation style using references stored in the references.bib bibtex file. More reference styles are available from Zotero.\ncsl: apa.csl\nbibliography: references.bib\nWith APA and other author-year styles, you can use in-text or parenthetical citations. Here is an example of a parenthetical citation of a master’s thesis (Tree, 1988). You can also cite articles and documents with in-line citations, such as the important work by Bringhurst (2019). A complete list of the references cited in this document can be found in a References section at the end of the document before the Appendices.\nWhen using the fancy option of byuthesis.cls, footnotes appear as side notes in the right margin. You can make a reference to a section by using its label, such as Section 1.1. You can reference a chapter in this way, for example.1\n\n1.2.1 Figures\nThe syntax above provides an example for declaring a subsection. This subsection will include some text and give an examples of figures and tables. Let’s start with figures. Figures are typically diagrams, graphs, pictures, maps, or charts. Figures should be centered with respect to the text column. Figure captions should be centered below the figure. If multiple lines are needed for the caption, it should be left/right justified at the margins. Figure 1.1 shows the gradient of a function and the half space where the function is decreasing. Notice how the @ref command always inserts both the Figure label and the correct number.\n\n\n\n\n\n\nFigure 1.1: This is a regular figure with a centered bottom caption.\n\n\n\nBasic quarto / markdown figures will create a figure located centrally in the text column. With the byuthesis.cls document class, we can have small figures that are set in the sidemargin.2 An example of a margin figure is shown in Figure~\\(\\ref{fig:brach}\\).\nWe can also create figures that place the caption in the side margin. This is a matter of personal preference. You can choose between centered captions and side-margin captions, but you should be consistent throughout your document.\nFinally, we can create a figure that spans the width of the text column and the side margin. This option should not be used frequently as it requires some tweaking of the vertical distance of the caption and follow-on text below the figure. It will work robustly when the figure appears at the top or middle of a page, but may push the caption onto the next page when it appears at the bottom. There may be some instances with wide images where the additional manual adjusting is worth the effort.\nFigures should be placed after the paragraph in which they are first referenced. If a figure will not fit on the same page, continue the text and place the figure at the top of the next page.\n\n1.2.1.1 Subsubsection Example\nThe syntax above provides an example of how to include a subsubsection. In this thesis template, the document has four primary division levels: \\chapter, \\section, \\subsection, and \\subsubsection. The command \\subsubsection is used to define the lowest level of division. Notice that subsubsection titles are not numbered.\n\n\n\n1.2.2 Tables\nTables typically contain numerical or statistical information. Tables are also fairly straightforward to include in a LaTeX document. Tables are most commonly centered in the text column with the table caption centered above the table. A basic table is given in Table 1.1.\n\n\n\nTable 1.1: My Caption\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nA\nB\nC\n\n\nE\nF\nG\n\n\nA\nG\nG\n\n\n\n\n\n\nLaTeX refers to figures and tables as floats and often tries to locate figures at the top or bottom of a page. The user has some control over this, but LaTeX can behave like it has a mind of its own sometimes. In reality it is placing figures according to internal algorithms and parameters that you can adjust. If you are interested in digging into this level of detail, an internet search on “LaTeX float parameters” will provide ample reading. Note that Quarto can understand raw LaTeX, but will only render it to the PDF, and not to any HTML or other output forms you might like to use.\n\n\n\n\nBringhurst, R. (2019). The elements of typographic style (Fourth). Hartley & Marks Publishers.\n\n\nTree, D. R. (1988). Development of a heat flux gauge for a partially insulated internal combustion engine [M.S. thesis]. Purdue University.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "An example thesis",
+    "section": "",
+    "text": "Inline footnotes are often easy to write, and can also use other references. For details on formatting, see Appendix Appendix A.↩︎\nSidemargin figures are a feature that are great in this thesis, but be careful that they will not render in the HTML version or in most journal templates.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "02_more.html",
+    "href": "02_more.html",
+    "title": "2  Using Quarto",
+    "section": "",
+    "text": "2.1 Figures in R\nYou can generate a figure with R, and refer to it in the text, such as I do with Figure 2.1. By default, the code is shown in the HTML but not in the PDF.\nggplot(mpg, aes(displ, hwy, colour = class)) + \n  geom_point() \n\n\n\n\n\n\n\nFigure 2.1: An example plot.\nBy default, the R figure will be centered in the text at",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "02_more.html#tables-in-r",
+    "href": "02_more.html#tables-in-r",
+    "title": "2  Using Quarto",
+    "section": "2.2 Tables in R",
+    "text": "2.2 Tables in R\nYou can also create tables. I like using kableExtra and modelsummary. you can also refer to tables, like in Table 2.1. Note that table captions are like titles, so should be in Title Case.\n\nmpg |&gt; \n  group_by(manufacturer) |&gt; \n  summarise(cty = mean(cty), hwy = mean(hwy)) |&gt; \n  kbl(digits = 3, booktabs = TRUE) |&gt; \n  kable_styling()\n\n\n\nTable 2.1: Example Table.\n\n\n\n\n\n\nmanufacturer\ncty\nhwy\n\n\n\n\naudi\n17.611\n26.444\n\n\nchevrolet\n15.000\n21.895\n\n\ndodge\n13.135\n17.946\n\n\nford\n14.000\n19.360\n\n\nhonda\n24.444\n32.556\n\n\nhyundai\n18.643\n26.857\n\n\njeep\n13.500\n17.625\n\n\nland rover\n11.500\n16.500\n\n\nlincoln\n11.333\n17.000\n\n\nmercury\n13.250\n18.000\n\n\nnissan\n18.077\n24.615\n\n\npontiac\n17.000\n26.400\n\n\nsubaru\n19.286\n25.571\n\n\ntoyota\n18.529\n24.912\n\n\nvolkswagen\n20.926\n29.222",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Using Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "03_articles.html",
+    "href": "03_articles.html",
+    "title": "3  Article-based Chapters",
+    "section": "",
+    "text": "3.1 Some Additional Comments\nThe publication of a conference or journal article is a significant milestone for a graduate student and should be an objective for all students pursuing graduate research in the College of Engineering. We encourage the use of article-based chapters in theses and dissertations provided that it aligns with the goals and objectives of the research. Articles, however, are often constrained in length forcing the exposition to be more concise or narrow in scope than may be desired for the intended audience of the thesis/dissertation. For example, if an objective is to guide the learning of subsequent graduate-student researchers, it may be beneficial to include additional details or a broader discussion that may be more tutorial in nature. Often more results from a wider variety of cases would be included in a dissertation or thesis than would be possible in a journal or conference publication. Your graduate committee will help guide your efforts in these matters.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Article-based Chapters</span>"
+    ]
+  },
+  {
+    "objectID": "03_articles.html#some-additional-comments",
+    "href": "03_articles.html#some-additional-comments",
+    "title": "3  Article-based Chapters",
+    "section": "",
+    "text": "Student, A., Researcher, M., & Professor, S. S. (2020). Really great research from a BYU engineering student. Awesome Engineering, 1(2), 1–10.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Article-based Chapters</span>"
+    ]
+  },
+  {
+    "objectID": "04_conclusions.html#footnotes",
+    "href": "04_conclusions.html#footnotes",
+    "title": "4  Conclusions",
+    "section": "",
+    "text": "A widow occurs when the last line of a paragraph ends up on the first line of a page. An orphan occurs when the first line of a paragraph appears on the last line of a page. Your document may require manual tweaking when it is in final form to get rid of widows and orphans.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Conclusions</span>"
+    ]
+  },
+  {
+    "objectID": "10_references.html",
+    "href": "10_references.html",
+    "title": "References",
+    "section": "",
+    "text": "Bringhurst, R. (2019). The elements of typographic style\n(Fourth). Hartley & Marks Publishers.\n\n\nStudent, A., Researcher, M., & Professor, S. S. (2020). Really great\nresearch from a BYU engineering student. Awesome\nEngineering, 1(2), 1–10.\n\n\nTree, D. R. (1988). Development of a heat flux gauge for a partially\ninsulated internal combustion engine [M.S. thesis]. Purdue\nUniversity.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "11_requirements.html",
+    "href": "11_requirements.html",
+    "title": "Appendix A — Thesis requirements",
+    "section": "",
+    "text": "Theses and dissertations in the College of Engineering should follow the requirements outlined below.\n\nBYU Graduate Studies requirements: The document must include a title page, abstract, and table of contents. The title page must follow the format prescribed at the Grad Studies website.\nPDF requirements: All fonts should be embedded in the PDF. The PDF file should include bookmarks for each chapter and heading that is present in the table of contents section. To embed the fonts, the following ghostscript command seems to work at embedding the fonts while preserving bookmarks and links. Note that for Windows machines, you probably need gswin64 instead of gs as the leading command.\n\ngs -dPDFSETTINGS=/prepress -dCompatibilityLevel=1.4\\\n  -dEmbedAllFonts=true -dSubsetFonts=false -dNOPAUSE\\\n  -dBATCH -sDEVICE=pdfwrite\\\n  -sOutputFile=output.pdf input.pdf\n\nPage size, margins, and line spacing: US letter-sized pages with margins of at least 1~inch on all sides of the text column should be used. Line spacing should be single spaced and facilitate readability with no more than six lines per inch. If using notes and figures in the side margin as is done with the fancy class option of byuthesis.cls, the space between the text column and the side-margin column must be at least 0.125~inches and the space between the side-margin column and the edge of the page must be at least 0.5~inches.\nTypeface and font: The text typeface must be a conservative serif-styled type (e.g., Palatino, Times New Roman, Garamond), in size 11 or 12 pt font. The typeface style and font size must be consistent throughout the text. A 10 pt font is allowed for figure and table captions. Font sizes for figures and tables should be selected so that the text easily legible on a printed page. A sans-serif typeface can be used for chapter and section headings if desired.\nUse of color: The main text of the document should be black in color. Color can be used judiciously in the document for items such as chapter names and numbers, section names and numbers, and figure and table labels. Colors of text should be limited to black, grey (0x666666), navy blue (0x002E5D), and royal blue (0x005CAB) as specified by university style guides at https://brand.byu.edu/colors.\nPage numbering: Preliminary matter should be numbered with lowercase Roman numerals (i, ii, and so forth) starting with the Table of Content page. Main matter beginning with the first page of the first chapter should be numbered consecutively with Arabic numerals starting with 1.\nChapters, sections, and appendices: The document should be divided into chapters. Within chapters, section and subsection headings should be set off with titles. Appendices may be included after the list of references.\nReferences: Works cited in the document should be included in a list of references after the last chapter and before appendices. References should be cited in the text using a standard format such as (author, year) or by number (e.g., [1]). The list of references should follow a standard format and must include sufficient information for the work to be located.\nEquations: Displayed equations should be numbered in the format (chapter.number), so that the first equation in Chapter 2 is numbered (2.1) and referenced in the text in the same format.\nFigures and tables: should be numbered in the format Figure chapter.number, as in Figure 2.1 or Table 3.2. Tables and figures appearing in appendices should be numbered A.1, A.2, B.1, and so forth. Figures should include a descriptive caption below the figure. Tables should include a descriptive title above the table.\nArticle-based chapters: If permitted by the thesis and dissertation formatting requirements of the department, submitted, accepted, or published articles for which the student is a primary author may be inserted as chapters in the thesis or dissertation. The inserted article text must be formatted in the same format as the other chapters of the document with consistent page numbering. Article-based chapters should provide a citation to the article and a brief statement of its publication status at the time of submission of the thesis/dissertation.\nGeneral formatting: Documents should follow formatting and typographic best practices and avoid common errors such as widow or orphan lines and excessive white space. Care should be taken to maintain a consistent typographic style throughout the document. Inconsistent usage of typefaces or fonts (e.g., italic, bold, etc.) are not generally acceptable. If uncertain, stick with the formatting of the provided templates.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Thesis requirements</span>"
+    ]
+  },
+  {
+    "objectID": "12_etd.html",
+    "href": "12_etd.html",
+    "title": "Appendix B — Electronic Document Submission",
+    "section": "",
+    "text": "B.1 PDF Bookmarks\nThe PDF document must contain bookmarks for preliminary pages plus chapter headings and subheadings, as listed in the Table of Contents. In the PDF document, bookmarks should be displayed in a panel to the left of the document pages as seen in Figure B.1.\nIf assistance is needed with embedding, bookmarks, or other aspects of submitting the ETD, you may obtain assistance at the Multimedia Lab in the HBLL. Please note that keywords for your research will be required at the time you submit your document. Keywords must be in lower case, unless they are acronyms or proper nouns. In addition, a copy of the abstract must be inserted. Helpful information on submitting your ETD copy can be found at https://gradprogress.sim.byu.edu/resources",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Electronic Document Submission</span>"
+    ]
+  },
+  {
+    "objectID": "12_etd.html#pdf-bookmarks",
+    "href": "12_etd.html#pdf-bookmarks",
+    "title": "Appendix B — Electronic Document Submission",
+    "section": "",
+    "text": "Figure B.1: PDF thesis document showing ETD bookmarks.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Electronic Document Submission</span>"
+    ]
+  },
+  {
+    "objectID": "12_etd.html#miscellaneous-filler",
+    "href": "12_etd.html#miscellaneous-filler",
+    "title": "Appendix B — Electronic Document Submission",
+    "section": "B.2 Miscellaneous Filler",
+    "text": "B.2 Miscellaneous Filler",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Electronic Document Submission</span>"
+    ]
+  }
+]
