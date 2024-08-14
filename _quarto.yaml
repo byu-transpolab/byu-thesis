@@ -3,7 +3,6 @@ project:
 
 book:
   title: "An example thesis"
-  author: "Cosmo Cougar"
   date: "2022"
   chapters:
     - index.qmd
