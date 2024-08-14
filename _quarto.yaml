@@ -35,6 +35,7 @@ layout: fancy, oneside, masters
 # the \degree command: \degree{Bachelors of Science}
 # degree: Bachelors of Science with University Honors
 department: Civil and Construction Engineering
+student: Cosmo Cougar
 # list your chair and any other members of your committee
 chair: Norman D. Smith
 committee:
