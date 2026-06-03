@@ -1,6 +1,12 @@
 # byu-thesis Format
 
+This is a quarto extension that renders a PDF that passes the BYU Engineering formatting checks. It doesn't
+have all of the fancy features of the underlying LaTeX template, but it gets the job done --- with embedded R and Python!.
+
+
 ## Installing
+
+If you just want to use this extension as a stand-alone document, then
 
 ```bash
 quarto use template byu-transpolab/byu-thesis
@@ -15,7 +21,7 @@ If you already have a quarto document that will serve for your thesis, you
 just need to install the extension. From inside your document folder,
 
 ```bash
-quarto install byu-transpolab/byu-thesis
+quarto add byu-transpolab/byu-thesis
 ```
 
 You can then add the following lines to your `_quarto.yml` file,
